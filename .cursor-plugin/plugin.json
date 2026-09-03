@@ -1,0 +1,30 @@
+{
+  "name": "tokenmonk-probe-repo",
+  "description": "Throwaway instrumentation plugin for the TokenMonk Cursor-capture M0 spikes. Installed from a Git repo to test whether plugin variables reach hook processes on a repo/marketplace install, as opposed to a local install. Records hook coverage locally; never blocks, denies, or sends anything off the machine.",
+  "version": "0.0.1",
+  "author": { "name": "TokenMonk" },
+  "license": "UNLICENSED",
+  "variables": {
+    "type": "object",
+    "properties": {
+      "TM_PROBE_VAR": {
+        "type": "string",
+        "title": "Probe sentinel",
+        "description": "Non-secret sentinel. If this value reaches the hook process, plugin variables are usable for config (PK-2 path a).",
+        "default": "tm-repo-sentinel-ok"
+      },
+      "CAPTURE_ENDPOINT": {
+        "type": "string",
+        "title": "Capture endpoint",
+        "description": "Shape-test only. Any URL will do.",
+        "default": "https://example.invalid/v1/capture"
+      },
+      "CAPTURE_TOKEN": {
+        "type": "string",
+        "title": "Capture token",
+        "description": "Shape-test only. The probe records ONLY whether this was substituted and its length, never its value. Do not put a real token here."
+      }
+    },
+    "required": ["TM_PROBE_VAR"]
+  }
+}

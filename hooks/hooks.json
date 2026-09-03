@@ -1,0 +1,140 @@
+{
+  "version": 1,
+  "hooks": {
+    "sessionStart": [
+      {
+        "type": "command",
+        "timeout": 5,
+        "command": "node \"${CURSOR_PLUGIN_ROOT}/probe.js\" --strategy=repo-plugin-root --source=repo --var-probe=${TM_PROBE_VAR} --var-endpoint=${CAPTURE_ENDPOINT} --var-token=${CAPTURE_TOKEN} --cursor-plugin-root=${CURSOR_PLUGIN_ROOT}"
+      }
+    ],
+    "sessionEnd": [
+      {
+        "type": "command",
+        "timeout": 3,
+        "command": "node \"${CURSOR_PLUGIN_ROOT}/probe.js\" --strategy=repo-plugin-root --source=repo --var-probe=${TM_PROBE_VAR} --var-endpoint=${CAPTURE_ENDPOINT} --var-token=${CAPTURE_TOKEN} --cursor-plugin-root=${CURSOR_PLUGIN_ROOT}"
+      }
+    ],
+    "beforeSubmitPrompt": [
+      {
+        "type": "command",
+        "timeout": 3,
+        "command": "node \"${CURSOR_PLUGIN_ROOT}/probe.js\" --strategy=repo-plugin-root --source=repo --var-probe=${TM_PROBE_VAR} --var-endpoint=${CAPTURE_ENDPOINT} --var-token=${CAPTURE_TOKEN} --cursor-plugin-root=${CURSOR_PLUGIN_ROOT}"
+      }
+    ],
+    "afterAgentResponse": [
+      {
+        "type": "command",
+        "timeout": 3,
+        "command": "node \"${CURSOR_PLUGIN_ROOT}/probe.js\" --strategy=repo-plugin-root --source=repo --var-probe=${TM_PROBE_VAR} --var-endpoint=${CAPTURE_ENDPOINT} --var-token=${CAPTURE_TOKEN} --cursor-plugin-root=${CURSOR_PLUGIN_ROOT}"
+      }
+    ],
+    "afterAgentThought": [
+      {
+        "type": "command",
+        "timeout": 3,
+        "command": "node \"${CURSOR_PLUGIN_ROOT}/probe.js\" --strategy=repo-plugin-root --source=repo --var-probe=${TM_PROBE_VAR} --var-endpoint=${CAPTURE_ENDPOINT} --var-token=${CAPTURE_TOKEN} --cursor-plugin-root=${CURSOR_PLUGIN_ROOT}"
+      }
+    ],
+    "stop": [
+      {
+        "type": "command",
+        "timeout": 3,
+        "command": "node \"${CURSOR_PLUGIN_ROOT}/probe.js\" --strategy=repo-plugin-root --source=repo --var-probe=${TM_PROBE_VAR} --var-endpoint=${CAPTURE_ENDPOINT} --var-token=${CAPTURE_TOKEN} --cursor-plugin-root=${CURSOR_PLUGIN_ROOT}",
+        "loop_limit": 1
+      }
+    ],
+    "preToolUse": [
+      {
+        "type": "command",
+        "timeout": 3,
+        "command": "node \"${CURSOR_PLUGIN_ROOT}/probe.js\" --strategy=repo-plugin-root --source=repo --var-probe=${TM_PROBE_VAR} --var-endpoint=${CAPTURE_ENDPOINT} --var-token=${CAPTURE_TOKEN} --cursor-plugin-root=${CURSOR_PLUGIN_ROOT}"
+      }
+    ],
+    "postToolUse": [
+      {
+        "type": "command",
+        "timeout": 3,
+        "command": "node \"${CURSOR_PLUGIN_ROOT}/probe.js\" --strategy=repo-plugin-root --source=repo --var-probe=${TM_PROBE_VAR} --var-endpoint=${CAPTURE_ENDPOINT} --var-token=${CAPTURE_TOKEN} --cursor-plugin-root=${CURSOR_PLUGIN_ROOT}"
+      }
+    ],
+    "postToolUseFailure": [
+      {
+        "type": "command",
+        "timeout": 3,
+        "command": "node \"${CURSOR_PLUGIN_ROOT}/probe.js\" --strategy=repo-plugin-root --source=repo --var-probe=${TM_PROBE_VAR} --var-endpoint=${CAPTURE_ENDPOINT} --var-token=${CAPTURE_TOKEN} --cursor-plugin-root=${CURSOR_PLUGIN_ROOT}"
+      }
+    ],
+    "beforeShellExecution": [
+      {
+        "type": "command",
+        "timeout": 3,
+        "command": "node \"${CURSOR_PLUGIN_ROOT}/probe.js\" --strategy=repo-plugin-root --source=repo --var-probe=${TM_PROBE_VAR} --var-endpoint=${CAPTURE_ENDPOINT} --var-token=${CAPTURE_TOKEN} --cursor-plugin-root=${CURSOR_PLUGIN_ROOT}"
+      }
+    ],
+    "afterShellExecution": [
+      {
+        "type": "command",
+        "timeout": 3,
+        "command": "node \"${CURSOR_PLUGIN_ROOT}/probe.js\" --strategy=repo-plugin-root --source=repo --var-probe=${TM_PROBE_VAR} --var-endpoint=${CAPTURE_ENDPOINT} --var-token=${CAPTURE_TOKEN} --cursor-plugin-root=${CURSOR_PLUGIN_ROOT}"
+      }
+    ],
+    "beforeMCPExecution": [
+      {
+        "type": "command",
+        "timeout": 3,
+        "command": "node \"${CURSOR_PLUGIN_ROOT}/probe.js\" --strategy=repo-plugin-root --source=repo --var-probe=${TM_PROBE_VAR} --var-endpoint=${CAPTURE_ENDPOINT} --var-token=${CAPTURE_TOKEN} --cursor-plugin-root=${CURSOR_PLUGIN_ROOT}"
+      }
+    ],
+    "afterMCPExecution": [
+      {
+        "type": "command",
+        "timeout": 3,
+        "command": "node \"${CURSOR_PLUGIN_ROOT}/probe.js\" --strategy=repo-plugin-root --source=repo --var-probe=${TM_PROBE_VAR} --var-endpoint=${CAPTURE_ENDPOINT} --var-token=${CAPTURE_TOKEN} --cursor-plugin-root=${CURSOR_PLUGIN_ROOT}"
+      }
+    ],
+    "beforeReadFile": [
+      {
+        "type": "command",
+        "timeout": 3,
+        "command": "node \"${CURSOR_PLUGIN_ROOT}/probe.js\" --strategy=repo-plugin-root --source=repo --var-probe=${TM_PROBE_VAR} --var-endpoint=${CAPTURE_ENDPOINT} --var-token=${CAPTURE_TOKEN} --cursor-plugin-root=${CURSOR_PLUGIN_ROOT}"
+      }
+    ],
+    "afterFileEdit": [
+      {
+        "type": "command",
+        "timeout": 3,
+        "command": "node \"${CURSOR_PLUGIN_ROOT}/probe.js\" --strategy=repo-plugin-root --source=repo --var-probe=${TM_PROBE_VAR} --var-endpoint=${CAPTURE_ENDPOINT} --var-token=${CAPTURE_TOKEN} --cursor-plugin-root=${CURSOR_PLUGIN_ROOT}"
+      }
+    ],
+    "subagentStart": [
+      {
+        "type": "command",
+        "timeout": 3,
+        "command": "node \"${CURSOR_PLUGIN_ROOT}/probe.js\" --strategy=repo-plugin-root --source=repo --var-probe=${TM_PROBE_VAR} --var-endpoint=${CAPTURE_ENDPOINT} --var-token=${CAPTURE_TOKEN} --cursor-plugin-root=${CURSOR_PLUGIN_ROOT}"
+      }
+    ],
+    "subagentStop": [
+      {
+        "type": "command",
+        "timeout": 3,
+        "command": "node \"${CURSOR_PLUGIN_ROOT}/probe.js\" --strategy=repo-plugin-root --source=repo --var-probe=${TM_PROBE_VAR} --var-endpoint=${CAPTURE_ENDPOINT} --var-token=${CAPTURE_TOKEN} --cursor-plugin-root=${CURSOR_PLUGIN_ROOT}",
+        "loop_limit": 1
+      }
+    ],
+    "preCompact": [
+      {
+        "type": "command",
+        "timeout": 3,
+        "command": "node \"${CURSOR_PLUGIN_ROOT}/probe.js\" --strategy=repo-plugin-root --source=repo --var-probe=${TM_PROBE_VAR} --var-endpoint=${CAPTURE_ENDPOINT} --var-token=${CAPTURE_TOKEN} --cursor-plugin-root=${CURSOR_PLUGIN_ROOT}"
+      }
+    ],
+    "workspaceOpen": [
+      {
+        "type": "command",
+        "timeout": 5,
+        "command": "node \"${CURSOR_PLUGIN_ROOT}/probe.js\" --strategy=repo-plugin-root --source=repo --var-probe=${TM_PROBE_VAR} --var-endpoint=${CAPTURE_ENDPOINT} --var-token=${CAPTURE_TOKEN} --cursor-plugin-root=${CURSOR_PLUGIN_ROOT}"
+      }
+    ]
+  }
+}
