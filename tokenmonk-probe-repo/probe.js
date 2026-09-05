@@ -220,8 +220,18 @@ async function main() {
     };
   }
 
+  // Syntax matrix (added after the first result proved ambiguous): the same variable requested four
+  // ways. Single-quoted forms are shell-proof, so a literal coming back means Cursor did not
+  // substitute, while an empty string means a shell expanded an unset name. The first test could
+  // not tell those apart.
+  const syntaxProbe = {};
+  for (const key of ["sq-var", "dq-var", "bare-var", "curly-var", "sq-root", "sq-project"]) {
+    if (args[key] !== undefined) syntaxProbe[key] = args[key];
+  }
+
   const record = {
     ts: new Date().toISOString(),
+    syntax_probe: syntaxProbe,
     event,
     strategy: args.strategy || "unknown",
     hook_source: args.source || "plugin",

@@ -5,42 +5,42 @@
       {
         "type": "command",
         "timeout": 5,
-        "command": "node \"${CURSOR_PLUGIN_ROOT}/probe.js\" --strategy=repo-plugin-root --source=repo --var-probe=${TM_PROBE_VAR} --var-endpoint=${CAPTURE_ENDPOINT} --var-token=${CAPTURE_TOKEN} --cursor-plugin-root=${CURSOR_PLUGIN_ROOT}"
+        "command": "node \"${CURSOR_PLUGIN_ROOT}/probe.js\" --strategy=repo-plugin-root --source=repo --var-probe=${TM_PROBE_VAR} --var-endpoint=${CAPTURE_ENDPOINT} --var-token=${CAPTURE_TOKEN} --cursor-plugin-root=${CURSOR_PLUGIN_ROOT} --sq-var='${TM_PROBE_VAR}' --dq-var=\"${TM_PROBE_VAR}\" --bare-var=$TM_PROBE_VAR --curly-var={{TM_PROBE_VAR}} --sq-root='${CURSOR_PLUGIN_ROOT}' --sq-project='${CURSOR_PROJECT_DIR}'"
       }
     ],
     "sessionEnd": [
       {
         "type": "command",
         "timeout": 3,
-        "command": "node \"${CURSOR_PLUGIN_ROOT}/probe.js\" --strategy=repo-plugin-root --source=repo --var-probe=${TM_PROBE_VAR} --var-endpoint=${CAPTURE_ENDPOINT} --var-token=${CAPTURE_TOKEN} --cursor-plugin-root=${CURSOR_PLUGIN_ROOT}"
+        "command": "node \"${CURSOR_PLUGIN_ROOT}/probe.js\" --strategy=repo-plugin-root --source=repo --var-probe=${TM_PROBE_VAR} --var-endpoint=${CAPTURE_ENDPOINT} --var-token=${CAPTURE_TOKEN} --cursor-plugin-root=${CURSOR_PLUGIN_ROOT} --sq-var='${TM_PROBE_VAR}' --dq-var=\"${TM_PROBE_VAR}\" --bare-var=$TM_PROBE_VAR --curly-var={{TM_PROBE_VAR}} --sq-root='${CURSOR_PLUGIN_ROOT}' --sq-project='${CURSOR_PROJECT_DIR}'"
       }
     ],
     "beforeSubmitPrompt": [
       {
         "type": "command",
         "timeout": 3,
-        "command": "node \"${CURSOR_PLUGIN_ROOT}/probe.js\" --strategy=repo-plugin-root --source=repo --var-probe=${TM_PROBE_VAR} --var-endpoint=${CAPTURE_ENDPOINT} --var-token=${CAPTURE_TOKEN} --cursor-plugin-root=${CURSOR_PLUGIN_ROOT}"
+        "command": "node \"${CURSOR_PLUGIN_ROOT}/probe.js\" --strategy=repo-plugin-root --source=repo --var-probe=${TM_PROBE_VAR} --var-endpoint=${CAPTURE_ENDPOINT} --var-token=${CAPTURE_TOKEN} --cursor-plugin-root=${CURSOR_PLUGIN_ROOT} --sq-var='${TM_PROBE_VAR}' --dq-var=\"${TM_PROBE_VAR}\" --bare-var=$TM_PROBE_VAR --curly-var={{TM_PROBE_VAR}} --sq-root='${CURSOR_PLUGIN_ROOT}' --sq-project='${CURSOR_PROJECT_DIR}'"
       }
     ],
     "afterAgentResponse": [
       {
         "type": "command",
         "timeout": 3,
-        "command": "node \"${CURSOR_PLUGIN_ROOT}/probe.js\" --strategy=repo-plugin-root --source=repo --var-probe=${TM_PROBE_VAR} --var-endpoint=${CAPTURE_ENDPOINT} --var-token=${CAPTURE_TOKEN} --cursor-plugin-root=${CURSOR_PLUGIN_ROOT}"
+        "command": "node \"${CURSOR_PLUGIN_ROOT}/probe.js\" --strategy=repo-plugin-root --source=repo --var-probe=${TM_PROBE_VAR} --var-endpoint=${CAPTURE_ENDPOINT} --var-token=${CAPTURE_TOKEN} --cursor-plugin-root=${CURSOR_PLUGIN_ROOT} --sq-var='${TM_PROBE_VAR}' --dq-var=\"${TM_PROBE_VAR}\" --bare-var=$TM_PROBE_VAR --curly-var={{TM_PROBE_VAR}} --sq-root='${CURSOR_PLUGIN_ROOT}' --sq-project='${CURSOR_PROJECT_DIR}'"
       }
     ],
     "afterAgentThought": [
       {
         "type": "command",
         "timeout": 3,
-        "command": "node \"${CURSOR_PLUGIN_ROOT}/probe.js\" --strategy=repo-plugin-root --source=repo --var-probe=${TM_PROBE_VAR} --var-endpoint=${CAPTURE_ENDPOINT} --var-token=${CAPTURE_TOKEN} --cursor-plugin-root=${CURSOR_PLUGIN_ROOT}"
+        "command": "node \"${CURSOR_PLUGIN_ROOT}/probe.js\" --strategy=repo-plugin-root --source=repo --var-probe=${TM_PROBE_VAR} --var-endpoint=${CAPTURE_ENDPOINT} --var-token=${CAPTURE_TOKEN} --cursor-plugin-root=${CURSOR_PLUGIN_ROOT} --sq-var='${TM_PROBE_VAR}' --dq-var=\"${TM_PROBE_VAR}\" --bare-var=$TM_PROBE_VAR --curly-var={{TM_PROBE_VAR}} --sq-root='${CURSOR_PLUGIN_ROOT}' --sq-project='${CURSOR_PROJECT_DIR}'"
       }
     ],
     "stop": [
       {
         "type": "command",
         "timeout": 3,
-        "command": "node \"${CURSOR_PLUGIN_ROOT}/probe.js\" --strategy=repo-plugin-root --source=repo --var-probe=${TM_PROBE_VAR} --var-endpoint=${CAPTURE_ENDPOINT} --var-token=${CAPTURE_TOKEN} --cursor-plugin-root=${CURSOR_PLUGIN_ROOT}",
+        "command": "node \"${CURSOR_PLUGIN_ROOT}/probe.js\" --strategy=repo-plugin-root --source=repo --var-probe=${TM_PROBE_VAR} --var-endpoint=${CAPTURE_ENDPOINT} --var-token=${CAPTURE_TOKEN} --cursor-plugin-root=${CURSOR_PLUGIN_ROOT} --sq-var='${TM_PROBE_VAR}' --dq-var=\"${TM_PROBE_VAR}\" --bare-var=$TM_PROBE_VAR --curly-var={{TM_PROBE_VAR}} --sq-root='${CURSOR_PLUGIN_ROOT}' --sq-project='${CURSOR_PROJECT_DIR}'",
         "loop_limit": 1
       }
     ],
@@ -48,77 +48,77 @@
       {
         "type": "command",
         "timeout": 3,
-        "command": "node \"${CURSOR_PLUGIN_ROOT}/probe.js\" --strategy=repo-plugin-root --source=repo --var-probe=${TM_PROBE_VAR} --var-endpoint=${CAPTURE_ENDPOINT} --var-token=${CAPTURE_TOKEN} --cursor-plugin-root=${CURSOR_PLUGIN_ROOT}"
+        "command": "node \"${CURSOR_PLUGIN_ROOT}/probe.js\" --strategy=repo-plugin-root --source=repo --var-probe=${TM_PROBE_VAR} --var-endpoint=${CAPTURE_ENDPOINT} --var-token=${CAPTURE_TOKEN} --cursor-plugin-root=${CURSOR_PLUGIN_ROOT} --sq-var='${TM_PROBE_VAR}' --dq-var=\"${TM_PROBE_VAR}\" --bare-var=$TM_PROBE_VAR --curly-var={{TM_PROBE_VAR}} --sq-root='${CURSOR_PLUGIN_ROOT}' --sq-project='${CURSOR_PROJECT_DIR}'"
       }
     ],
     "postToolUse": [
       {
         "type": "command",
         "timeout": 3,
-        "command": "node \"${CURSOR_PLUGIN_ROOT}/probe.js\" --strategy=repo-plugin-root --source=repo --var-probe=${TM_PROBE_VAR} --var-endpoint=${CAPTURE_ENDPOINT} --var-token=${CAPTURE_TOKEN} --cursor-plugin-root=${CURSOR_PLUGIN_ROOT}"
+        "command": "node \"${CURSOR_PLUGIN_ROOT}/probe.js\" --strategy=repo-plugin-root --source=repo --var-probe=${TM_PROBE_VAR} --var-endpoint=${CAPTURE_ENDPOINT} --var-token=${CAPTURE_TOKEN} --cursor-plugin-root=${CURSOR_PLUGIN_ROOT} --sq-var='${TM_PROBE_VAR}' --dq-var=\"${TM_PROBE_VAR}\" --bare-var=$TM_PROBE_VAR --curly-var={{TM_PROBE_VAR}} --sq-root='${CURSOR_PLUGIN_ROOT}' --sq-project='${CURSOR_PROJECT_DIR}'"
       }
     ],
     "postToolUseFailure": [
       {
         "type": "command",
         "timeout": 3,
-        "command": "node \"${CURSOR_PLUGIN_ROOT}/probe.js\" --strategy=repo-plugin-root --source=repo --var-probe=${TM_PROBE_VAR} --var-endpoint=${CAPTURE_ENDPOINT} --var-token=${CAPTURE_TOKEN} --cursor-plugin-root=${CURSOR_PLUGIN_ROOT}"
+        "command": "node \"${CURSOR_PLUGIN_ROOT}/probe.js\" --strategy=repo-plugin-root --source=repo --var-probe=${TM_PROBE_VAR} --var-endpoint=${CAPTURE_ENDPOINT} --var-token=${CAPTURE_TOKEN} --cursor-plugin-root=${CURSOR_PLUGIN_ROOT} --sq-var='${TM_PROBE_VAR}' --dq-var=\"${TM_PROBE_VAR}\" --bare-var=$TM_PROBE_VAR --curly-var={{TM_PROBE_VAR}} --sq-root='${CURSOR_PLUGIN_ROOT}' --sq-project='${CURSOR_PROJECT_DIR}'"
       }
     ],
     "beforeShellExecution": [
       {
         "type": "command",
         "timeout": 3,
-        "command": "node \"${CURSOR_PLUGIN_ROOT}/probe.js\" --strategy=repo-plugin-root --source=repo --var-probe=${TM_PROBE_VAR} --var-endpoint=${CAPTURE_ENDPOINT} --var-token=${CAPTURE_TOKEN} --cursor-plugin-root=${CURSOR_PLUGIN_ROOT}"
+        "command": "node \"${CURSOR_PLUGIN_ROOT}/probe.js\" --strategy=repo-plugin-root --source=repo --var-probe=${TM_PROBE_VAR} --var-endpoint=${CAPTURE_ENDPOINT} --var-token=${CAPTURE_TOKEN} --cursor-plugin-root=${CURSOR_PLUGIN_ROOT} --sq-var='${TM_PROBE_VAR}' --dq-var=\"${TM_PROBE_VAR}\" --bare-var=$TM_PROBE_VAR --curly-var={{TM_PROBE_VAR}} --sq-root='${CURSOR_PLUGIN_ROOT}' --sq-project='${CURSOR_PROJECT_DIR}'"
       }
     ],
     "afterShellExecution": [
       {
         "type": "command",
         "timeout": 3,
-        "command": "node \"${CURSOR_PLUGIN_ROOT}/probe.js\" --strategy=repo-plugin-root --source=repo --var-probe=${TM_PROBE_VAR} --var-endpoint=${CAPTURE_ENDPOINT} --var-token=${CAPTURE_TOKEN} --cursor-plugin-root=${CURSOR_PLUGIN_ROOT}"
+        "command": "node \"${CURSOR_PLUGIN_ROOT}/probe.js\" --strategy=repo-plugin-root --source=repo --var-probe=${TM_PROBE_VAR} --var-endpoint=${CAPTURE_ENDPOINT} --var-token=${CAPTURE_TOKEN} --cursor-plugin-root=${CURSOR_PLUGIN_ROOT} --sq-var='${TM_PROBE_VAR}' --dq-var=\"${TM_PROBE_VAR}\" --bare-var=$TM_PROBE_VAR --curly-var={{TM_PROBE_VAR}} --sq-root='${CURSOR_PLUGIN_ROOT}' --sq-project='${CURSOR_PROJECT_DIR}'"
       }
     ],
     "beforeMCPExecution": [
       {
         "type": "command",
         "timeout": 3,
-        "command": "node \"${CURSOR_PLUGIN_ROOT}/probe.js\" --strategy=repo-plugin-root --source=repo --var-probe=${TM_PROBE_VAR} --var-endpoint=${CAPTURE_ENDPOINT} --var-token=${CAPTURE_TOKEN} --cursor-plugin-root=${CURSOR_PLUGIN_ROOT}"
+        "command": "node \"${CURSOR_PLUGIN_ROOT}/probe.js\" --strategy=repo-plugin-root --source=repo --var-probe=${TM_PROBE_VAR} --var-endpoint=${CAPTURE_ENDPOINT} --var-token=${CAPTURE_TOKEN} --cursor-plugin-root=${CURSOR_PLUGIN_ROOT} --sq-var='${TM_PROBE_VAR}' --dq-var=\"${TM_PROBE_VAR}\" --bare-var=$TM_PROBE_VAR --curly-var={{TM_PROBE_VAR}} --sq-root='${CURSOR_PLUGIN_ROOT}' --sq-project='${CURSOR_PROJECT_DIR}'"
       }
     ],
     "afterMCPExecution": [
       {
         "type": "command",
         "timeout": 3,
-        "command": "node \"${CURSOR_PLUGIN_ROOT}/probe.js\" --strategy=repo-plugin-root --source=repo --var-probe=${TM_PROBE_VAR} --var-endpoint=${CAPTURE_ENDPOINT} --var-token=${CAPTURE_TOKEN} --cursor-plugin-root=${CURSOR_PLUGIN_ROOT}"
+        "command": "node \"${CURSOR_PLUGIN_ROOT}/probe.js\" --strategy=repo-plugin-root --source=repo --var-probe=${TM_PROBE_VAR} --var-endpoint=${CAPTURE_ENDPOINT} --var-token=${CAPTURE_TOKEN} --cursor-plugin-root=${CURSOR_PLUGIN_ROOT} --sq-var='${TM_PROBE_VAR}' --dq-var=\"${TM_PROBE_VAR}\" --bare-var=$TM_PROBE_VAR --curly-var={{TM_PROBE_VAR}} --sq-root='${CURSOR_PLUGIN_ROOT}' --sq-project='${CURSOR_PROJECT_DIR}'"
       }
     ],
     "beforeReadFile": [
       {
         "type": "command",
         "timeout": 3,
-        "command": "node \"${CURSOR_PLUGIN_ROOT}/probe.js\" --strategy=repo-plugin-root --source=repo --var-probe=${TM_PROBE_VAR} --var-endpoint=${CAPTURE_ENDPOINT} --var-token=${CAPTURE_TOKEN} --cursor-plugin-root=${CURSOR_PLUGIN_ROOT}"
+        "command": "node \"${CURSOR_PLUGIN_ROOT}/probe.js\" --strategy=repo-plugin-root --source=repo --var-probe=${TM_PROBE_VAR} --var-endpoint=${CAPTURE_ENDPOINT} --var-token=${CAPTURE_TOKEN} --cursor-plugin-root=${CURSOR_PLUGIN_ROOT} --sq-var='${TM_PROBE_VAR}' --dq-var=\"${TM_PROBE_VAR}\" --bare-var=$TM_PROBE_VAR --curly-var={{TM_PROBE_VAR}} --sq-root='${CURSOR_PLUGIN_ROOT}' --sq-project='${CURSOR_PROJECT_DIR}'"
       }
     ],
     "afterFileEdit": [
       {
         "type": "command",
         "timeout": 3,
-        "command": "node \"${CURSOR_PLUGIN_ROOT}/probe.js\" --strategy=repo-plugin-root --source=repo --var-probe=${TM_PROBE_VAR} --var-endpoint=${CAPTURE_ENDPOINT} --var-token=${CAPTURE_TOKEN} --cursor-plugin-root=${CURSOR_PLUGIN_ROOT}"
+        "command": "node \"${CURSOR_PLUGIN_ROOT}/probe.js\" --strategy=repo-plugin-root --source=repo --var-probe=${TM_PROBE_VAR} --var-endpoint=${CAPTURE_ENDPOINT} --var-token=${CAPTURE_TOKEN} --cursor-plugin-root=${CURSOR_PLUGIN_ROOT} --sq-var='${TM_PROBE_VAR}' --dq-var=\"${TM_PROBE_VAR}\" --bare-var=$TM_PROBE_VAR --curly-var={{TM_PROBE_VAR}} --sq-root='${CURSOR_PLUGIN_ROOT}' --sq-project='${CURSOR_PROJECT_DIR}'"
       }
     ],
     "subagentStart": [
       {
         "type": "command",
         "timeout": 3,
-        "command": "node \"${CURSOR_PLUGIN_ROOT}/probe.js\" --strategy=repo-plugin-root --source=repo --var-probe=${TM_PROBE_VAR} --var-endpoint=${CAPTURE_ENDPOINT} --var-token=${CAPTURE_TOKEN} --cursor-plugin-root=${CURSOR_PLUGIN_ROOT}"
+        "command": "node \"${CURSOR_PLUGIN_ROOT}/probe.js\" --strategy=repo-plugin-root --source=repo --var-probe=${TM_PROBE_VAR} --var-endpoint=${CAPTURE_ENDPOINT} --var-token=${CAPTURE_TOKEN} --cursor-plugin-root=${CURSOR_PLUGIN_ROOT} --sq-var='${TM_PROBE_VAR}' --dq-var=\"${TM_PROBE_VAR}\" --bare-var=$TM_PROBE_VAR --curly-var={{TM_PROBE_VAR}} --sq-root='${CURSOR_PLUGIN_ROOT}' --sq-project='${CURSOR_PROJECT_DIR}'"
       }
     ],
     "subagentStop": [
       {
         "type": "command",
         "timeout": 3,
-        "command": "node \"${CURSOR_PLUGIN_ROOT}/probe.js\" --strategy=repo-plugin-root --source=repo --var-probe=${TM_PROBE_VAR} --var-endpoint=${CAPTURE_ENDPOINT} --var-token=${CAPTURE_TOKEN} --cursor-plugin-root=${CURSOR_PLUGIN_ROOT}",
+        "command": "node \"${CURSOR_PLUGIN_ROOT}/probe.js\" --strategy=repo-plugin-root --source=repo --var-probe=${TM_PROBE_VAR} --var-endpoint=${CAPTURE_ENDPOINT} --var-token=${CAPTURE_TOKEN} --cursor-plugin-root=${CURSOR_PLUGIN_ROOT} --sq-var='${TM_PROBE_VAR}' --dq-var=\"${TM_PROBE_VAR}\" --bare-var=$TM_PROBE_VAR --curly-var={{TM_PROBE_VAR}} --sq-root='${CURSOR_PLUGIN_ROOT}' --sq-project='${CURSOR_PROJECT_DIR}'",
         "loop_limit": 1
       }
     ],
@@ -126,14 +126,14 @@
       {
         "type": "command",
         "timeout": 3,
-        "command": "node \"${CURSOR_PLUGIN_ROOT}/probe.js\" --strategy=repo-plugin-root --source=repo --var-probe=${TM_PROBE_VAR} --var-endpoint=${CAPTURE_ENDPOINT} --var-token=${CAPTURE_TOKEN} --cursor-plugin-root=${CURSOR_PLUGIN_ROOT}"
+        "command": "node \"${CURSOR_PLUGIN_ROOT}/probe.js\" --strategy=repo-plugin-root --source=repo --var-probe=${TM_PROBE_VAR} --var-endpoint=${CAPTURE_ENDPOINT} --var-token=${CAPTURE_TOKEN} --cursor-plugin-root=${CURSOR_PLUGIN_ROOT} --sq-var='${TM_PROBE_VAR}' --dq-var=\"${TM_PROBE_VAR}\" --bare-var=$TM_PROBE_VAR --curly-var={{TM_PROBE_VAR}} --sq-root='${CURSOR_PLUGIN_ROOT}' --sq-project='${CURSOR_PROJECT_DIR}'"
       }
     ],
     "workspaceOpen": [
       {
         "type": "command",
         "timeout": 5,
-        "command": "node \"${CURSOR_PLUGIN_ROOT}/probe.js\" --strategy=repo-plugin-root --source=repo --var-probe=${TM_PROBE_VAR} --var-endpoint=${CAPTURE_ENDPOINT} --var-token=${CAPTURE_TOKEN} --cursor-plugin-root=${CURSOR_PLUGIN_ROOT}"
+        "command": "node \"${CURSOR_PLUGIN_ROOT}/probe.js\" --strategy=repo-plugin-root --source=repo --var-probe=${TM_PROBE_VAR} --var-endpoint=${CAPTURE_ENDPOINT} --var-token=${CAPTURE_TOKEN} --cursor-plugin-root=${CURSOR_PLUGIN_ROOT} --sq-var='${TM_PROBE_VAR}' --dq-var=\"${TM_PROBE_VAR}\" --bare-var=$TM_PROBE_VAR --curly-var={{TM_PROBE_VAR}} --sq-root='${CURSOR_PLUGIN_ROOT}' --sq-project='${CURSOR_PROJECT_DIR}'"
       }
     ]
   }
