@@ -1,0 +1,13 @@
+{
+  "mcpServers": {
+    "tokenmonk-config-probe": {
+      "command": "node",
+      "args": ["${CURSOR_PLUGIN_ROOT}/config-mcp.js"],
+      "env": {
+        "TM_PROBE_VAR": "${TM_PROBE_VAR}",
+        "CAPTURE_ENDPOINT": "${CAPTURE_ENDPOINT}",
+        "CAPTURE_TOKEN": "${CAPTURE_TOKEN}"
+      }
+    }
+  }
+}
