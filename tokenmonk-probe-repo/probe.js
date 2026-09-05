@@ -188,7 +188,24 @@ function envSnapshot() {
   const relatedKeys = Object.keys(process.env)
     .filter((k) => /^(CURSOR_|PLUGIN_|TM_|CAPTURE_|TOKENMONK_)/.test(k))
     .sort();
-  return { present, relatedKeys };
+
+  // A prefix filter can only find what it expects. These two close that gap:
+  //
+  //   allKeys       every environment variable NAME (never a value), so an injection under an
+  //                 unexpected naming convention is still visible.
+  //   sentinelHits  a search by VALUE for the known non-secret sentinels. If Cursor delivers the
+  //                 variable under ANY name, this finds it without guessing the name at all.
+  const allKeys = Object.keys(process.env).sort();
+  const SENTINELS = { "tm-repo-sentinel-ok": "TM_PROBE_VAR", "tm-var-reached-hooks-42": "TM_PROBE_VAR",
+    "https://probe.invalid/v1/capture": "CAPTURE_ENDPOINT" };
+  const sentinelHits = [];
+  for (const [k, v] of Object.entries(process.env)) {
+    if (typeof v !== "string") continue;
+    for (const [needle, declared] of Object.entries(SENTINELS)) {
+      if (v === needle || v.includes(needle)) sentinelHits.push({ envKey: k, matches: declared });
+    }
+  }
+  return { present, relatedKeys, allKeys, sentinelHits };
 }
 
 async function main() {
