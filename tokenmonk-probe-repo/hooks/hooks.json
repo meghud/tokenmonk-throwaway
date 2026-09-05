@@ -10,7 +10,12 @@
           "TM_FROM_HOOK_ENV": "${TM_PROBE_VAR}",
           "TM_ENDPOINT_FROM_ENV": "${CAPTURE_ENDPOINT}",
           "TM_TOKEN_FROM_ENV": "${CAPTURE_TOKEN}"
-        }
+        },
+        "args": [
+          "--argsarray-var=${TM_PROBE_VAR}",
+          "--argsarray-endpoint=${CAPTURE_ENDPOINT}",
+          "${TM_PROBE_VAR}"
+        ]
       }
     ],
     "sessionEnd": [
@@ -22,7 +27,12 @@
           "TM_FROM_HOOK_ENV": "${TM_PROBE_VAR}",
           "TM_ENDPOINT_FROM_ENV": "${CAPTURE_ENDPOINT}",
           "TM_TOKEN_FROM_ENV": "${CAPTURE_TOKEN}"
-        }
+        },
+        "args": [
+          "--argsarray-var=${TM_PROBE_VAR}",
+          "--argsarray-endpoint=${CAPTURE_ENDPOINT}",
+          "${TM_PROBE_VAR}"
+        ]
       }
     ],
     "beforeSubmitPrompt": [
@@ -34,7 +44,12 @@
           "TM_FROM_HOOK_ENV": "${TM_PROBE_VAR}",
           "TM_ENDPOINT_FROM_ENV": "${CAPTURE_ENDPOINT}",
           "TM_TOKEN_FROM_ENV": "${CAPTURE_TOKEN}"
-        }
+        },
+        "args": [
+          "--argsarray-var=${TM_PROBE_VAR}",
+          "--argsarray-endpoint=${CAPTURE_ENDPOINT}",
+          "${TM_PROBE_VAR}"
+        ]
       }
     ],
     "afterAgentResponse": [
@@ -46,7 +61,12 @@
           "TM_FROM_HOOK_ENV": "${TM_PROBE_VAR}",
           "TM_ENDPOINT_FROM_ENV": "${CAPTURE_ENDPOINT}",
           "TM_TOKEN_FROM_ENV": "${CAPTURE_TOKEN}"
-        }
+        },
+        "args": [
+          "--argsarray-var=${TM_PROBE_VAR}",
+          "--argsarray-endpoint=${CAPTURE_ENDPOINT}",
+          "${TM_PROBE_VAR}"
+        ]
       }
     ],
     "afterAgentThought": [
@@ -58,7 +78,12 @@
           "TM_FROM_HOOK_ENV": "${TM_PROBE_VAR}",
           "TM_ENDPOINT_FROM_ENV": "${CAPTURE_ENDPOINT}",
           "TM_TOKEN_FROM_ENV": "${CAPTURE_TOKEN}"
-        }
+        },
+        "args": [
+          "--argsarray-var=${TM_PROBE_VAR}",
+          "--argsarray-endpoint=${CAPTURE_ENDPOINT}",
+          "${TM_PROBE_VAR}"
+        ]
       }
     ],
     "stop": [
@@ -71,7 +96,12 @@
           "TM_FROM_HOOK_ENV": "${TM_PROBE_VAR}",
           "TM_ENDPOINT_FROM_ENV": "${CAPTURE_ENDPOINT}",
           "TM_TOKEN_FROM_ENV": "${CAPTURE_TOKEN}"
-        }
+        },
+        "args": [
+          "--argsarray-var=${TM_PROBE_VAR}",
+          "--argsarray-endpoint=${CAPTURE_ENDPOINT}",
+          "${TM_PROBE_VAR}"
+        ]
       }
     ],
     "preToolUse": [
@@ -83,7 +113,12 @@
           "TM_FROM_HOOK_ENV": "${TM_PROBE_VAR}",
           "TM_ENDPOINT_FROM_ENV": "${CAPTURE_ENDPOINT}",
           "TM_TOKEN_FROM_ENV": "${CAPTURE_TOKEN}"
-        }
+        },
+        "args": [
+          "--argsarray-var=${TM_PROBE_VAR}",
+          "--argsarray-endpoint=${CAPTURE_ENDPOINT}",
+          "${TM_PROBE_VAR}"
+        ]
       }
     ],
     "postToolUse": [
@@ -95,7 +130,12 @@
           "TM_FROM_HOOK_ENV": "${TM_PROBE_VAR}",
           "TM_ENDPOINT_FROM_ENV": "${CAPTURE_ENDPOINT}",
           "TM_TOKEN_FROM_ENV": "${CAPTURE_TOKEN}"
-        }
+        },
+        "args": [
+          "--argsarray-var=${TM_PROBE_VAR}",
+          "--argsarray-endpoint=${CAPTURE_ENDPOINT}",
+          "${TM_PROBE_VAR}"
+        ]
       }
     ],
     "postToolUseFailure": [
@@ -107,7 +147,12 @@
           "TM_FROM_HOOK_ENV": "${TM_PROBE_VAR}",
           "TM_ENDPOINT_FROM_ENV": "${CAPTURE_ENDPOINT}",
           "TM_TOKEN_FROM_ENV": "${CAPTURE_TOKEN}"
-        }
+        },
+        "args": [
+          "--argsarray-var=${TM_PROBE_VAR}",
+          "--argsarray-endpoint=${CAPTURE_ENDPOINT}",
+          "${TM_PROBE_VAR}"
+        ]
       }
     ],
     "beforeShellExecution": [
@@ -119,7 +164,12 @@
           "TM_FROM_HOOK_ENV": "${TM_PROBE_VAR}",
           "TM_ENDPOINT_FROM_ENV": "${CAPTURE_ENDPOINT}",
           "TM_TOKEN_FROM_ENV": "${CAPTURE_TOKEN}"
-        }
+        },
+        "args": [
+          "--argsarray-var=${TM_PROBE_VAR}",
+          "--argsarray-endpoint=${CAPTURE_ENDPOINT}",
+          "${TM_PROBE_VAR}"
+        ]
       }
     ],
     "afterShellExecution": [
@@ -131,7 +181,12 @@
           "TM_FROM_HOOK_ENV": "${TM_PROBE_VAR}",
           "TM_ENDPOINT_FROM_ENV": "${CAPTURE_ENDPOINT}",
           "TM_TOKEN_FROM_ENV": "${CAPTURE_TOKEN}"
-        }
+        },
+        "args": [
+          "--argsarray-var=${TM_PROBE_VAR}",
+          "--argsarray-endpoint=${CAPTURE_ENDPOINT}",
+          "${TM_PROBE_VAR}"
+        ]
       }
     ],
     "beforeMCPExecution": [
@@ -143,7 +198,12 @@
           "TM_FROM_HOOK_ENV": "${TM_PROBE_VAR}",
           "TM_ENDPOINT_FROM_ENV": "${CAPTURE_ENDPOINT}",
           "TM_TOKEN_FROM_ENV": "${CAPTURE_TOKEN}"
-        }
+        },
+        "args": [
+          "--argsarray-var=${TM_PROBE_VAR}",
+          "--argsarray-endpoint=${CAPTURE_ENDPOINT}",
+          "${TM_PROBE_VAR}"
+        ]
       }
     ],
     "afterMCPExecution": [
@@ -155,7 +215,12 @@
           "TM_FROM_HOOK_ENV": "${TM_PROBE_VAR}",
           "TM_ENDPOINT_FROM_ENV": "${CAPTURE_ENDPOINT}",
           "TM_TOKEN_FROM_ENV": "${CAPTURE_TOKEN}"
-        }
+        },
+        "args": [
+          "--argsarray-var=${TM_PROBE_VAR}",
+          "--argsarray-endpoint=${CAPTURE_ENDPOINT}",
+          "${TM_PROBE_VAR}"
+        ]
       }
     ],
     "beforeReadFile": [
@@ -167,7 +232,12 @@
           "TM_FROM_HOOK_ENV": "${TM_PROBE_VAR}",
           "TM_ENDPOINT_FROM_ENV": "${CAPTURE_ENDPOINT}",
           "TM_TOKEN_FROM_ENV": "${CAPTURE_TOKEN}"
-        }
+        },
+        "args": [
+          "--argsarray-var=${TM_PROBE_VAR}",
+          "--argsarray-endpoint=${CAPTURE_ENDPOINT}",
+          "${TM_PROBE_VAR}"
+        ]
       }
     ],
     "afterFileEdit": [
@@ -179,7 +249,12 @@
           "TM_FROM_HOOK_ENV": "${TM_PROBE_VAR}",
           "TM_ENDPOINT_FROM_ENV": "${CAPTURE_ENDPOINT}",
           "TM_TOKEN_FROM_ENV": "${CAPTURE_TOKEN}"
-        }
+        },
+        "args": [
+          "--argsarray-var=${TM_PROBE_VAR}",
+          "--argsarray-endpoint=${CAPTURE_ENDPOINT}",
+          "${TM_PROBE_VAR}"
+        ]
       }
     ],
     "subagentStart": [
@@ -191,7 +266,12 @@
           "TM_FROM_HOOK_ENV": "${TM_PROBE_VAR}",
           "TM_ENDPOINT_FROM_ENV": "${CAPTURE_ENDPOINT}",
           "TM_TOKEN_FROM_ENV": "${CAPTURE_TOKEN}"
-        }
+        },
+        "args": [
+          "--argsarray-var=${TM_PROBE_VAR}",
+          "--argsarray-endpoint=${CAPTURE_ENDPOINT}",
+          "${TM_PROBE_VAR}"
+        ]
       }
     ],
     "subagentStop": [
@@ -204,7 +284,12 @@
           "TM_FROM_HOOK_ENV": "${TM_PROBE_VAR}",
           "TM_ENDPOINT_FROM_ENV": "${CAPTURE_ENDPOINT}",
           "TM_TOKEN_FROM_ENV": "${CAPTURE_TOKEN}"
-        }
+        },
+        "args": [
+          "--argsarray-var=${TM_PROBE_VAR}",
+          "--argsarray-endpoint=${CAPTURE_ENDPOINT}",
+          "${TM_PROBE_VAR}"
+        ]
       }
     ],
     "preCompact": [
@@ -216,7 +301,12 @@
           "TM_FROM_HOOK_ENV": "${TM_PROBE_VAR}",
           "TM_ENDPOINT_FROM_ENV": "${CAPTURE_ENDPOINT}",
           "TM_TOKEN_FROM_ENV": "${CAPTURE_TOKEN}"
-        }
+        },
+        "args": [
+          "--argsarray-var=${TM_PROBE_VAR}",
+          "--argsarray-endpoint=${CAPTURE_ENDPOINT}",
+          "${TM_PROBE_VAR}"
+        ]
       }
     ],
     "workspaceOpen": [
@@ -228,7 +318,12 @@
           "TM_FROM_HOOK_ENV": "${TM_PROBE_VAR}",
           "TM_ENDPOINT_FROM_ENV": "${CAPTURE_ENDPOINT}",
           "TM_TOKEN_FROM_ENV": "${CAPTURE_TOKEN}"
-        }
+        },
+        "args": [
+          "--argsarray-var=${TM_PROBE_VAR}",
+          "--argsarray-endpoint=${CAPTURE_ENDPOINT}",
+          "${TM_PROBE_VAR}"
+        ]
       }
     ]
   }

@@ -252,9 +252,20 @@ async function main() {
     if (args[key] !== undefined) syntaxProbe[key] = args[key];
   }
 
+  // Every argv entry as received, so a value delivered positionally — or under a flag this script
+  // does not parse — is still visible. Token-shaped entries are reduced to a length.
+  const argvAll = process.argv.slice(2).map((a) => {
+    const m = /^(--[^=]*token[^=]*)=([\s\S]*)$/i.exec(a);
+    if (m) return `${m[1]}=<len:${m[2].length}>`;
+    // Never let the redaction hide the thing under test: a known sentinel is recorded verbatim.
+    if (["tm-repo-sentinel-ok", "tm-var-reached-hooks-42"].some((x) => a.includes(x))) return a;
+    return /^[A-Za-z0-9._-]{24,}$/.test(a) ? `<opaque:${a.length}>` : a;
+  });
+
   const record = {
     ts: new Date().toISOString(),
     syntax_probe: syntaxProbe,
+    argv_all: argvAll,
     event,
     strategy: args.strategy || "unknown",
     hook_source: args.source || "plugin",
@@ -298,6 +309,7 @@ async function main() {
       `  plugin variables: ${env.sentinelHits.length
         ? `FOUND -> ${JSON.stringify(env.sentinelHits)}`
         : "none (no env value matches a declared sentinel, under any key name)"}`,
+      `  argv: ${argvAll.join(" ")}`,
       `  all names: ${env.allKeys.join(" ")}`,
     ];
     process.stderr.write(lines.join("\n") + "\n");
