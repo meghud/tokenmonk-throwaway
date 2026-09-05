@@ -171,6 +171,9 @@ function envSnapshot() {
     "CURSOR_PROJECT_DIR", "CURSOR_VERSION", "CURSOR_USER_EMAIL", "CURSOR_TRANSCRIPT_PATH",
     "CURSOR_CODE_REMOTE", "CLAUDE_PROJECT_DIR", "CURSOR_PLUGIN_ROOT", "PLUGIN_ROOT",
     "TM_SPIKE_SESSION_ID", "TM_SPIKE_SURFACE", "TM_SPIKE_STAMP", "TM_PROBE_VAR", "CAPTURE_ENDPOINT",
+    // Delivered via the hook entry's own `env` block — the documented mechanism. Distinct names so
+    // an arrival here cannot be confused with any other delivery path.
+    "TM_FROM_HOOK_ENV", "TM_ENDPOINT_FROM_ENV", "TM_TOKEN_FROM_ENV",
     // Set in the shell before running the CLI: the only reliable IDE-vs-CLI discriminator,
     // because the CLI inherits the terminal environment and the IDE does not.
     "TM_SPIKE_RUN",
