@@ -170,6 +170,9 @@ function envSnapshot() {
   const interesting = [
     "CURSOR_PROJECT_DIR", "CURSOR_VERSION", "CURSOR_USER_EMAIL", "CURSOR_TRANSCRIPT_PATH",
     "CURSOR_CODE_REMOTE", "CLAUDE_PROJECT_DIR", "CURSOR_PLUGIN_ROOT", "PLUGIN_ROOT",
+    // Undocumented, and CURSOR_LAYOUT may be the only local signal distinguishing the Agents
+    // window from the sidebar — the surface split that keeps voiding the MCP test.
+    "CURSOR_LAYOUT", "CURSOR_WORKSPACE_LABEL", "CURSOR_RIPGREP_PATH",
     "TM_SPIKE_SESSION_ID", "TM_SPIKE_SURFACE", "TM_SPIKE_STAMP", "TM_PROBE_VAR", "CAPTURE_ENDPOINT",
     // Delivered via the hook entry's own `env` block — the documented mechanism. Distinct names so
     // an arrival here cannot be confused with any other delivery path.
@@ -284,6 +287,23 @@ async function main() {
     payload: scrub(payload),
     self_ms: Number(process.hrtime.bigint() - START_NS) / 1e6,
   };
+
+  // Human-readable dump for Cursor's Hooks output channel. Deliberately on stderr: stdout carries
+  // the JSON contract Cursor parses, and anything else there would corrupt every hook response.
+  try {
+    const env = record.env;
+    const lines = [
+      `[tokenmonk-probe] ${event} (${record.strategy}) — ${env.allKeys.length} env vars`,
+      `  values: ${Object.entries(env.present).map(([k, v]) => `${k}=${JSON.stringify(v)}`).join(" ")}`,
+      `  plugin variables: ${env.sentinelHits.length
+        ? `FOUND -> ${JSON.stringify(env.sentinelHits)}`
+        : "none (no env value matches a declared sentinel, under any key name)"}`,
+      `  all names: ${env.allKeys.join(" ")}`,
+    ];
+    process.stderr.write(lines.join("\n") + "\n");
+  } catch {
+    // Diagnostics must never break the hook.
+  }
 
   try {
     fs.mkdirSync(SPIKE_DIR, { recursive: true });
