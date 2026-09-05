@@ -1,0 +1,21 @@
+{
+  "name": "tokenmonk-throwaway",
+  "owner": {
+    "name": "TokenMonk"
+  },
+  "metadata": {
+    "description": "Disposable marketplace holding one instrumentation plugin for the TokenMonk Cursor-capture M0 spikes.",
+    "version": "0.0.2"
+  },
+  "plugins": [
+    {
+      "name": "tokenmonk-probe-repo",
+      "source": "tokenmonk-probe-repo",
+      "description": "Observe-only hook probe. Records Cursor hook coverage and payload shapes locally to answer whether plugin variables reach hook processes on a repo/marketplace install. Never blocks an action and sends nothing off the machine.",
+      "version": "0.0.1",
+      "author": "TokenMonk",
+      "category": "other",
+      "tags": ["diagnostics", "throwaway"]
+    }
+  ]
+}
