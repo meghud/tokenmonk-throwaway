@@ -39,7 +39,22 @@
       {
         "type": "command",
         "timeout": 3,
-        "command": "node \"${CURSOR_PLUGIN_ROOT}/probe.js\" --strategy=repo-plugin-root --source=repo --var-probe=${TM_PROBE_VAR} --var-endpoint=${CAPTURE_ENDPOINT} --var-token=${CAPTURE_TOKEN} --cursor-plugin-root=${CURSOR_PLUGIN_ROOT} --sq-var='${TM_PROBE_VAR}' --dq-var=\"${TM_PROBE_VAR}\" --bare-var=$TM_PROBE_VAR --curly-var={{TM_PROBE_VAR}} --sq-root='${CURSOR_PLUGIN_ROOT}' --sq-project='${CURSOR_PROJECT_DIR}'",
+        "command": "node \"${CURSOR_PLUGIN_ROOT}/probe.js\" --strategy=repo-plugin-root --source=repo --var-probe=${TM_PROBE_VAR} --var-endpoint=${CAPTURE_ENDPOINT} --var-token=${CAPTURE_TOKEN} --cursor-plugin-root=${CURSOR_PLUGIN_ROOT} --sq-var='${TM_PROBE_VAR}' --dq-var=\"${TM_PROBE_VAR}\" --bare-var=$TM_PROBE_VAR --curly-var={{TM_PROBE_VAR}} --sq-root='${CURSOR_PLUGIN_ROOT}' --sq-project='${CURSOR_PROJECT_DIR}' --ctx-token=TM-CTX-ALPHA",
+        "env": {
+          "TM_FROM_HOOK_ENV": "${TM_PROBE_VAR}",
+          "TM_ENDPOINT_FROM_ENV": "${CAPTURE_ENDPOINT}",
+          "TM_TOKEN_FROM_ENV": "${CAPTURE_TOKEN}"
+        },
+        "args": [
+          "--argsarray-var=${TM_PROBE_VAR}",
+          "--argsarray-endpoint=${CAPTURE_ENDPOINT}",
+          "${TM_PROBE_VAR}"
+        ]
+      },
+      {
+        "type": "command",
+        "timeout": 3,
+        "command": "node \"${CURSOR_PLUGIN_ROOT}/probe.js\" --strategy=repo-ctx-bravo --source=repo --var-probe=${TM_PROBE_VAR} --var-endpoint=${CAPTURE_ENDPOINT} --var-token=${CAPTURE_TOKEN} --cursor-plugin-root=${CURSOR_PLUGIN_ROOT} --sq-var='${TM_PROBE_VAR}' --dq-var=\"${TM_PROBE_VAR}\" --bare-var=$TM_PROBE_VAR --curly-var={{TM_PROBE_VAR}} --sq-root='${CURSOR_PLUGIN_ROOT}' --sq-project='${CURSOR_PROJECT_DIR}' --ctx-token=TM-CTX-BRAVO",
         "env": {
           "TM_FROM_HOOK_ENV": "${TM_PROBE_VAR}",
           "TM_ENDPOINT_FROM_ENV": "${CAPTURE_ENDPOINT}",

@@ -51,10 +51,22 @@ function surfaceAtSessionStart(payload) {
   return "ide";
 }
 
-function outputFor(event, sessionId, payload) {
+function outputFor(event, sessionId, payload, args) {
   switch (event) {
-    case "beforeSubmitPrompt":
-      return { continue: true };
+    case "beforeSubmitPrompt": {
+      // Gate 0: does `additional_context` from beforeSubmitPrompt actually reach the model? Cursor's
+      // docs say yes, the parity report says no, and nothing has been observed. The token is the
+      // read-out — if the agent echoes it, injection works. Two registrations carrying *different*
+      // tokens also answer whether Cursor merges the stdout of multiple hooks on one event.
+      const token = args["ctx-token"];
+      if (!token) return { continue: true };
+      return {
+        continue: true,
+        additional_context:
+          `${token}: automated capture-plugin test. Begin your reply with the exact token ` +
+          `${token} on its own line, then answer the user normally.`,
+      };
+    }
     case "preToolUse":
     case "beforeMCPExecution":
     case "beforeShellExecution":
@@ -222,7 +234,7 @@ async function main() {
   // Print the agent-facing output first so the measured cost is a true upper bound on blocking.
   let output = {};
   try {
-    output = outputFor(event, sessionId, payload);
+    output = outputFor(event, sessionId, payload, args);
   } catch {
     output = {};
   }
